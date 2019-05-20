@@ -1,0 +1,194 @@
+$ModernFontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$TraditionalFontFamily: Georgia, 'Times New Roman', Times, serif;
+$checked-color: #e02929;
+$unchecked-color: rgb(255, 218, 8);
+$support-color:rgb(98, 107, 110);
+$focus-outline-color:rgb(194, 200, 202);
+button:focus {outline:0;}
+
+.tradFont {
+    @import url("https://fonts.googleapis.com/css?family=Old+Standard+TT");
+    font-family: 'Old Standard TT', serif;
+}
+
+.statTable {
+    left: 50%;
+    right: 50%;
+    margin-top: 50px;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    height: 500px;
+}
+.rt-tr {
+    font-weight: 400;
+}
+.-pagination input, .-pagination select {
+    font-weight: 300 !important;
+}
+.pagination-bottom {
+    font-weight: 300;
+}
+.rt-td {
+    font-weight: 300;
+}
+.currentTask {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    font-weight: 100;
+}
+@mixin Link {
+    font-size: 2em;
+    font-weight: 100;
+    text-decoration: none;
+    color: black;
+    // :hover {
+    //     border-bottom: 0.005em solid $support-color;
+    //     color: $support-color;
+    // }
+}
+.SettingLink {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    @include Link;
+}
+
+.StatLink {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    @include Link;
+}
+
+.modernFont {
+    font-family: $ModernFontFamily;
+}
+.todo-input {
+    text-align: center;
+    width: 11em;
+    padding: none;
+    font-weight: 200;
+}
+.todo-input:focus {
+    outline-color: $focus-outline-color;
+}
+.PomoInput {
+    width: 200px;
+}
+.PomoInput:focus {
+    outline-color: $focus-outline-color;
+}
+@mixin spaceBetCenter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.clockType {
+    width: 11em;
+    @include spaceBetCenter;
+}
+
+@mixin clock {
+    font-weight: 200;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.BigClock {
+    font-size: 50px;
+    width: 500px;
+    @include clock;
+}
+.middleClock {
+    width: 700px;
+    font-size: 30px;
+    @include clock;
+}
+.middleClock div {
+    margin-bottom: 0.05em;
+}
+
+@mixin startTimer {
+    width: 11.2em;
+    font-weight: 200;
+    border: none;
+    padding: 0px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.startPomoTimer {
+    background-color: rgb(224, 41, 41);
+    color: white;
+    @include startTimer
+}
+.startNorTimer {
+    background-color: rgb(255, 218, 8);
+    @include startTimer
+}
+.TimerControll {
+    width: 5.5em;
+    @include spaceBetCenter;
+}
+.TimerControll button {
+    font-weight: 100;
+    background: none;
+    padding: 0px;
+    border: none;
+    font-size: 0.8em;
+    transform: translate(-50%, -50%);
+}
+#endButton {
+    transform: translate(50%, -50%);
+}
+.TimerControll button:hover {
+    border-bottom: 0.005em solid $support-color;
+    color: $support-color;
+}
+
+.Slider {
+    margin-top: 10px;
+}
+.SettingContainer {
+    margin: 0px auto;
+    margin-top: 100px;
+    text-align: right;
+    font-weight: 200;
+    font-size: 20px;
+    width: 50%;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.SettingContainer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.TimeDiv{
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+    font-weight: 100;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.TimeDiv div {
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.Colon {
+    position: relative;
+    bottom: 0.1em;
+}
