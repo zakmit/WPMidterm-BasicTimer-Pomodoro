@@ -16,9 +16,15 @@ NTU Web Programming 2019 Midterm Project
 * Handwritten scss
   * Despite some package(ex: `react-switch`, `react-table`) comes with their default css.
 
+## Demo Video
+
+[https://youtu.be/qxZb1ENcWmU][1]
+
 ## How to start?
 
 `npm start` in `backend` and `frontend`, `backend` will be `localhost:5000`, frontend is `localhost:3000`.
+
+( Before you use, Please Enter database address in `backend/models/entry` )
 
 ## Frontend
 
@@ -63,3 +69,5 @@ All method connect to database have been defined in `communication.js`, and mode
 ### Using package
 
 `express`, `mongoose`, `cors`, `body-parser`, `cross-env` to define PORT.
+
+[1]: https://youtu.be/qxZb1ENcWmU
